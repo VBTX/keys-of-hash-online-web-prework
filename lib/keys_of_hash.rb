@@ -1,13 +1,13 @@
 class Hash
   def keys_of(*arguments)
     arr = []
+    self.each do |key, value|
     arguments.each do |elem|
-      Hash.keys.each do |k, v|
-        if elem == v
-          arr << elem
+        if elem == value
+          arr << key
         end
       end
   end
-  arr
+  return arr
 end
 end
